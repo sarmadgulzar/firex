@@ -5,14 +5,15 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="firex",
-    version="0.0.1",
+    version="0.0.2",
     author="Sarmad Gulzar",
     author_email="sarmadgulzar@hotmail.com",
     description="Firebase with Python",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/sarmadgulzar/firex",
-    packages=setuptools.find_packages(),
+    package_dir={"": "src"},
+    packages=setuptools.find_packages(where="src"),
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
